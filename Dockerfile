@@ -1,5 +1,5 @@
-FROM quay.io/lyfe00011/md:beta
-RUN git clone https://github.com/lyfe00011/levanter.git /root/LyFE/
-WORKDIR /root/LyFE/
-RUN yarn install
+FROM quay.io/loki-xer/jarvis-md:latest
+RUN git clone https://github.com/Loki-Xer/Jarvis /root/Jarvis-md/
+WORKDIR /root/Jarvis-md/
+RUN yarn install --network-concurrency 1
 CMD ["npm", "start"]
